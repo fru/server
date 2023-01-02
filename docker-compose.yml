@@ -1,0 +1,14 @@
+# version: '3.2'
+services:
+  agent:
+    image: dokku/dokku:latest
+    environment:
+      DOKKU_HOSTNAME: rueberg.eu
+      DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/dokku:/mnt/dokku
+    ports:
+      - "2222:22"
+      - "80:80"
+      - "443:443"
