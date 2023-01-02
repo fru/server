@@ -1,13 +1,10 @@
 # version: '3.2'
 services:
   agent:
-    image: dokku/dokku:latest
-    environment:
-      DOKKU_HOSTNAME: rueberg.eu
-      DOKKU_HOST_ROOT: /var/lib/dokku/home/dokku
+    image: appwrite/appwrite:1.2.0
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - /var/lib/dokku:/mnt/dokku
+      - /var/lib/appwrite:/usr/src/code/appwrite:rw
     ports:
       - "2222:22"
       - "80:80"
