@@ -15,4 +15,9 @@ bash ./2-init-letsencrypt.sh
 ```
 > :warning: Portainer aufrufen (http://{ip}:9000) um Benutzer zu setzen: root + work long pw
 
-## Update 
+## Update
+```
+cd ./.install
+git pull
+docker-compose up -d
+```
