@@ -1,7 +1,7 @@
 module.exports = {
   apps : [{
     name   : "hooks",
-    script : "./server.js",
+    script : "./hooks/server.js",
     "watch": true,
     "watch_options": {
       "followSymlinks": false,
