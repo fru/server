@@ -5,8 +5,7 @@ const { exec } = require('child_process');
 
 app.get('/hook-deploy', (req, res) => {
   exec('bash ./4-on-hook-deploy.sh', (err, stdout, stderr) => {
-   // handle err, stdout & stderr
-    res.send('V1: ' + stdout);
+    res.send('V1: ' + stdout + stderr);
   });
   
 });
