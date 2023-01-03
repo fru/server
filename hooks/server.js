@@ -10,7 +10,7 @@ app.get('/hook-deploy', (req, res) => {
 });
 
 app.get('/test12', (req, res) => {
-  res.send('Not final :-( 1,');
+  res.send('Not final :-( 1,2,');
 });
 
 const server = app.listen(port, () => {
