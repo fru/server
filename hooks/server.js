@@ -3,10 +3,10 @@ const app = express();
 const port = 4005;
 const { exec } = require('child_process');
 
-app.post('/pull', (req, res) => {
-  exec('git pull', (err, stdout, stderr) => {
+app.get('/hook-deploy', (req, res) => {
+  exec('bash ./on-hook-deploy.sh', (err, stdout, stderr) => {
    // handle err, stdout & stderr
-    res.send('12345 test' + stdout + stderr);
+    res.send('V1: ' + stdout);
   });
   
 });
