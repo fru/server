@@ -6,7 +6,7 @@
 apt-get install git -y
 git clone https://github.com/fru/server.git ./.install
 cd ./.install
-./1-init-docker.sh
-./2-init-letsencrypt.sh
+bash ./1-init-docker.sh
+bash ./2-init-letsencrypt.sh
 ```
 > :warning: Portainer aufrufen (http://{ip}:9000) um Benutzer zu setzen: root + work long pw
