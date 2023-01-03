@@ -4,7 +4,8 @@
 - Open Webmin Terminal: https://{ip}:10000/xterm
 ```
 apt-get install git -y
-git clone https://github.com/fru/server.git .
+git clone https://github.com/fru/server.git ./.install
+cd ./.install
 ./1-init-docker.sh
 ./2-init-letsencrypt.sh
 ```
