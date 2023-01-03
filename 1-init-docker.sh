@@ -1,7 +1,7 @@
 #!/bin/bash
 
 apt-get update
-apt-get install ca-certificates curl gnupg lsb-release
+apt-get install ca-certificates curl gnupg lsb-release -y
 
 echo "### Add docker apt source"
     
@@ -15,7 +15,7 @@ echo \
 echo "### Install docker"
 
 apt-get update
-apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 
 echo "### Install portainer"
 
