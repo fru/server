@@ -20,5 +20,5 @@ bash ./3-init-github-hook.sh
 ```
 cd ./.install
 git pull
-docker-compose up -d
+docker-compose up --force-recreate -d nginx
 ```
