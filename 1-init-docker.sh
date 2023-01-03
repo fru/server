@@ -16,6 +16,7 @@ echo "### Install docker"
 
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
+apt-get install docker-compose -y
 
 echo "### Install portainer"
 
