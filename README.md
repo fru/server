@@ -7,4 +7,4 @@ git clone https://github.com/fru/server.git .
 ./1-init-docker.sh
 ./2-init-letsencrypt.sh
 ```
-> :warning: Login in portainer um Benutzer zu setzen: root + work long pw
+> :warning: Portainer aufrufen um Benutzer zu setzen: root + work long pw
