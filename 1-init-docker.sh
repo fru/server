@@ -2,6 +2,8 @@
 
 apt-get update
 apt-get install ca-certificates curl gnupg lsb-release
+
+echo "### Add docker apt source"
     
 mkdir -p /etc/apt/keyrings
 curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
@@ -9,8 +11,12 @@ curl -fsSL https://download.docker.com/linux/debian/gpg | gpg --dearmor -o /etc/
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/debian \
   $(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null
-  
+
+echo "### Install docker"
+
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+
+echo "### Install portainer"
 
 docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
