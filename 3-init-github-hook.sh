@@ -1,2 +1,2 @@
-apt-get install nodejs -y
+apt-get install nodejs npm -y
 
