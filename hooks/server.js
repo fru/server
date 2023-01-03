@@ -4,7 +4,7 @@ const port = 4005;
 
 app.get('/', (req, res) => {
   console.log('API was successfully requested');
-  res.send();
+  res.send('12345 test');
 });
 
 const server = app.listen(port, () => {
