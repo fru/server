@@ -1,10 +1,14 @@
 const express = require('express');
 const app = express();
 const port = 4005;
+const { exec } = require('child_process');
 
 app.post('/pull', (req, res) => {
-  console.log('API was successfully requested');
-  res.send('12345 test');
+  exec('git pull', (err, stdout, stderr) => {
+   // handle err, stdout & stderr
+    res.send('12345 test' + stdout + stderr);
+  });
+  
 });
 
 const server = app.listen(port, () => {
