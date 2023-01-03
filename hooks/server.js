@@ -9,8 +9,8 @@ app.get('/hook-deploy', (req, res) => {
   });
 });
 
-app.get('/test123', (req, res) => {
-  res.send('Test!!!');
+app.get('/test1', (req, res) => {
+  res.send('Test');
 });
 
 const server = app.listen(port, () => {
