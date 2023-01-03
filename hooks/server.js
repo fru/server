@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const port = 4005;
 
-app.get('/', (req, res) => {
+app.post('/pull', (req, res) => {
   console.log('API was successfully requested');
   res.send('12345 test');
 });
