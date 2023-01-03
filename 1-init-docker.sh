@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git config pull.rebase false
+
 apt-get update
 apt-get install ca-certificates curl gnupg lsb-release -y
 
