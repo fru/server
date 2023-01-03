@@ -1,5 +1,5 @@
 # Reinstall
-- Login can be found in gdrive: /install/server-login.txt
+- Login can be found in gdrive: Install > Server > Login
 - Unter "https://my.contabo.com/vps" Neuinstallation mit: Debian 11 + Webmin + work long pw
 - Open Webmin Terminal: https://{ip}:10000/xterm
 ```
