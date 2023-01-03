@@ -6,4 +6,4 @@ npm install -g pm2
 pm2 start ./hooks/server.js
 pm2 save
 
-pm2 startup
+pm2 startup -u root
