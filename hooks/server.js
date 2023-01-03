@@ -7,7 +7,6 @@ app.get('/hook-deploy', (req, res) => {
   exec('bash ./4-on-hook-deploy.sh', (err, stdout, stderr) => {
     res.send('V1: ' + stdout + stderr);
   });
-  
 });
 
 const server = app.listen(port, () => {
