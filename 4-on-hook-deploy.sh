@@ -1,2 +1,2 @@
 git pull
-pm2 restart ./hooks/server.js
+bash pm2 restart ./hooks/server.js &
