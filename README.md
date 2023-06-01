@@ -22,6 +22,12 @@ docker-compose -f .install/docker-compose.yml up -d
 ```
 > :warning: Call Portainer (http://{ip}:9000) to set a user: root + work long pw
 
+## Compose
+Create a docker compose file from all containers
+```
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docker-autocompose $(docker ps -aq)
+```
+
 ## Update
 ```
 cd ./.install
