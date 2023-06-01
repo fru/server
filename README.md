@@ -4,7 +4,7 @@ Repository contains the rueberg.eu server setup
 
 ## Login
 - https://my.contabo.de
-- User 	florian.rueberg@gmail.com
+- User Gmail Email
 - Password  work long lowercase
 
 ## Setup
