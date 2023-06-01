@@ -2,9 +2,10 @@ version: "3"
 services:
   portainer:
     image: portainer/portainer:latest
+    container_name: portainer
     ports:
       - 9000:9000
-      volumes:
-        - /opt/portainer:/data
-        - /var/run/docker.sock:/var/run/docker.sock
+    volumes:
+      - /opt/portainer:/data
+      - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
