@@ -19,9 +19,3 @@ echo "### Install docker"
 apt-get update
 apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
 apt-get install docker-compose -y
-sleep 30s
-systemctl start docker
-
-echo "### Install portainer"
-
-docker run -d -p 9000:9000 --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /opt/portainer:/data portainer/portainer
