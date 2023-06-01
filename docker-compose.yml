@@ -17,20 +17,12 @@ services:
     environment:
       - PUID=1000
       - PGID=1000
-      - TZ=Etc/UTC
+      - TZ=Europe/Berlin
       - URL=rueberg.eu
       - VALIDATION=http
-      - SUBDOMAINS=www, #optional
-      - CERTPROVIDER= #optional
-      - DNSPLUGIN=cloudflare #optional
-      - PROPAGATION= #optional
-      - EMAIL= #optional
-      - ONLY_SUBDOMAINS=false #optional
-      - EXTRA_DOMAINS= #optional
-      - STAGING=false #optional
     volumes:
-      - /path/to/appdata/config:/config
+      - /server/config:/config
     ports:
       - 443:443
-      - 80:80 #optional
+      - 80:80
     restart: unless-stopped
