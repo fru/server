@@ -16,8 +16,7 @@ Repository contains the rueberg.eu server setup
 ``
 apt-get install git -y
 git clone https://github.com/fru/server.git ./.install
-cd ./.install
-bash ./install.sh
+bash ./.install/install.sh
 ```
 > :warning: Portainer aufrufen (http://{ip}:9000) um Benutzer zu setzen: root + work long pw
 
