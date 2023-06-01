@@ -29,7 +29,7 @@ docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docke
 ```
 Cleanup
 ```
-docker-compose down
+docker-compose -f .install/docker-compose.yml down
 docker rm -f $(docker ps -a -q)
 ```
 ## Update
