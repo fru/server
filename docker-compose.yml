@@ -22,7 +22,7 @@ services:
       - VALIDATION=http
     volumes:
       - /opt/swag:/config
-      - ~/.install/nginx:/config/nginx/custom
+      - ~/.install/nginx:/config/nginx/site-confs
     ports:
       - 443:443
       - 80:80
