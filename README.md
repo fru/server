@@ -4,11 +4,11 @@ Repository contains the rueberg.eu server setup
 
 ## Login
 - https://my.contabo.de
-- User Gmail Email
-- Password  work long lowercase
+- User: gmail email
+- Password: work long lowercase
 
 ## Setup
-- Unter "https://my.contabo.com/vps" Neuinstallation mit: Debian 11 + Webmin + work long pw (both fields)
+- Under "https://my.contabo.com/vps" Reinstall with: Debian 11 + Webmin + work long pw (both fields)
 - IP: 185.207.250.251
 - Open Webmin Terminal: https://{ip}:10000/xterm
 
@@ -18,7 +18,7 @@ apt-get install git -y
 git clone https://github.com/fru/server.git ./.install
 bash ./.install/install.sh
 ```
-> :warning: Portainer aufrufen (http://{ip}:9000) um Benutzer zu setzen: root + work long pw
+> :warning: Call Portainer (http://{ip}:9000) to set a user: root + work long pw
 
 ## Update
 ```
