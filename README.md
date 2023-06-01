@@ -26,11 +26,6 @@ mv ~/.install/nginx.conf /opt/swag/nginx/site-confs/default.conf
 ## Helper
 ```
 docker rm -f $(docker ps -a -q)
-docker-compose -f .install/docker-compose.yml up -d --force-recreate
-```
-## Update
-```
-cd ./.install
-git pull
-docker-compose up --force-recreate -d nginx
+docker-compose -f ~/.install/docker-compose.yml up -d --force-recreate
+ git -C ~/.install pull
 ```
