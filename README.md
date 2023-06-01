@@ -13,7 +13,7 @@ Repository contains the rueberg.eu server setup
 - Open Webmin Terminal: https://{ip}:10000/xterm
 
 ## Install
-``
+```
 apt-get install git -y
 git clone https://github.com/fru/server.git ./.install
 bash ./.install/install.sh
