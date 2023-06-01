@@ -27,5 +27,5 @@ mv ~/.install/nginx.conf /opt/swag/nginx/site-confs/default.conf
 ```
 docker rm -f $(docker ps -a -q)
 docker-compose -f ~/.install/docker-compose.yml up -d --force-recreate
- git -C ~/.install pull
+git -C ~/.install pull
 ```
