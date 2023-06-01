@@ -27,7 +27,11 @@ Create a docker compose file from all containers
 ```
 docker run --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/red5d/docker-autocompose $(docker ps -aq)
 ```
-
+Cleanup
+```
+docker-compose down
+docker rm -f $(docker ps -a -q)
+```
 ## Update
 ```
 cd ./.install
