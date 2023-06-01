@@ -18,8 +18,10 @@ apt-get install git -y
 git clone https://github.com/fru/server.git ~/.install
 bash ~/.install/install.sh
 systemctl start docker
-docker-compose -f ~/.install/docker-compose.yml up -d
+mkdir --parents /opt/swag/nginx/site-confs
 cp ~/.install/nginx.conf /opt/swag/nginx/site-confs/default.conf
+docker-compose -f ~/.install/docker-compose.yml up -d
+
 ```
 > :warning: Call Portainer (http://{ip}:9000) to set a user: root + work long pw
 
