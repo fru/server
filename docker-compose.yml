@@ -27,3 +27,6 @@ services:
       - 443:443
       - 80:80
     restart: unless-stopped
+networks:
+  shared_net:
+    name: shared_network
