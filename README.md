@@ -30,6 +30,11 @@ git -C ~/.install pull
 docker rm -f $(docker ps -a -q)
 ```
 
+## Docker Secrets
+```
+printf "???" | docker secret create MAIL_APP_PW -
+```
+
 ## Btld Web
 ```
 git clone https://github.com/fru/btld-web.git ~/btld-web
