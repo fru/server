@@ -29,7 +29,7 @@ services:
     restart: unless-stopped
   webhookd:
     hostname: webhookd
-    image: ncarlier/webhookd:latest
+    image: ncarlier/webhookd:edge-distrib
     container_name: webhookd
     ports:
       - "83:80" 
