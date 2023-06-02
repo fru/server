@@ -35,5 +35,6 @@ docker rm -f $(docker ps -a -q)
 ```
 git clone https://github.com/fru/btld-web.git ~/btld-web
 git -C ~/btld-web pull
-docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build -p btld-web
+export COMPOSE_PROJECT_NAME=btld-web
+docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build
 ```
