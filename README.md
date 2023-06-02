@@ -21,7 +21,6 @@ systemctl start docker
 mkdir --parents /opt/swag/nginx/site-confs
 cp ~/.install/nginx.conf /opt/swag/nginx/site-confs/default.conf
 docker-compose -f ~/.install/docker-compose.yml up -d --build
-
 ```
 > :warning: Call Portainer (http://{ip}:9000) to set a user: root + work long pw
 
@@ -35,6 +34,5 @@ docker rm -f $(docker ps -a -q)
 ```
 git clone https://github.com/fru/btld-web.git ~/btld-web
 git -C ~/btld-web pull
-export COMPOSE_PROJECT_NAME=btld-web
-docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build
+COMPOSE_PROJECT_NAME=btld-web docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build
 ```
