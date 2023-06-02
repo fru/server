@@ -27,3 +27,17 @@ services:
       - 443:443
       - 80:80
     restart: unless-stopped
+  webhookd:
+    hostname: webhookd
+    image: ncarlier/webhookd:latest
+    container_name: webhookd
+    expose:
+      - "83:80" 
+    restart: always
+    environment:
+      WHD_LISTEN_ADDR: ":80"
+      WHD_SCRIPTS: /hooks
+      WHD_HOOK_TIMEOUT: '600'  
+    volumes:
+     - ./hooks:/hooks
+     - /var/run/docker.sock:/var/run/docker.sock       
