@@ -9,6 +9,8 @@ services:
       - /opt/portainer:/data
       - /var/run/docker.sock:/var/run/docker.sock
     restart: unless-stopped
+    networks:
+      - shared_net
   swag:
     image: lscr.io/linuxserver/swag:latest
     container_name: swag
@@ -27,6 +29,8 @@ services:
       - 443:443
       - 80:80
     restart: unless-stopped
+    networks:
+      - shared_net
 networks:
   shared_net:
     name: shared_network
