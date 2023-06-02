@@ -32,6 +32,7 @@ docker rm -f $(docker ps -a -q)
 
 ## Docker Secrets
 ```
+docker swarm init
 printf "???" | docker secret create MAIL_APP_PW -
 ```
 
