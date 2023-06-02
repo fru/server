@@ -31,8 +31,9 @@ git -C ~/.install pull
 docker rm -f $(docker ps -a -q)
 ```
 
-## Btld
+## Btld Web
 ```
 git clone https://github.com/fru/btld-web.git ~/btld-web
+git -C ~/btld-web pull
 docker-compose -f ~/btld-web/src/server/docker-compose.yml up -d --force-recreate
 ```
