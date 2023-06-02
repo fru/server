@@ -30,15 +30,10 @@ git -C ~/.install pull
 docker rm -f $(docker ps -a -q)
 ```
 
-## Docker Secrets
-```
-docker swarm init
-printf "???" | docker secret create MAIL_APP_PW -
-```
-
 ## Btld Web
 ```
 git clone https://github.com/fru/btld-web.git ~/btld-web
 git -C ~/btld-web pull
 COMPOSE_PROJECT_NAME=btld-web docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build
 ```
+> :warning: Use xterm to write the secrets: nano ~/.install/secrets/MAIL_APP_PW.txt
