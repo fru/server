@@ -30,6 +30,7 @@ services:
   webhookd:
     hostname: webhookd
     image: ncarlier/webhookd:edge-distrib
+    user: root
     container_name: webhookd
     ports:
       - "83:80" 
