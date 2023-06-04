@@ -22,8 +22,8 @@ services:
       - VALIDATION=http
     volumes:
       - /opt/swag:/config
-      - ~/.install/www:/www/root
-      - ~/btld-web/@btld-web/editor/dist:/www/editor
+      ~ ~/.install/:/install
+      - ~/btld-web/@btld-web/editor/dist:/editor/www
     ports:
       - 443:443
       - 80:80
