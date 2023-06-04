@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker container ls
+git -C ~/.install pull
+docker restart swag
