@@ -26,6 +26,7 @@ docker-compose -f ~/.install/docker-compose.yml up -d --build
 
 ## Helper
 ```
+git reset --hard
 git -C ~/.install pull
 docker rm -f $(docker ps -a -q)
 ```
@@ -35,5 +36,12 @@ docker rm -f $(docker ps -a -q)
 git clone https://github.com/fru/btld-web.git ~/btld-web
 git -C ~/btld-web pull
 COMPOSE_PROJECT_NAME=btld-web docker-compose -f ~/btld-web/@btld-web/server/docker-compose.yml up -d --build
+```
+
+## Secrets
+```
+cp ~/.install/secrets.env /data/secrets.env
+nano /data/secrets.env
+export $(grep -v '^#' /data/secrets.env | xargs -d '\n') 
 ```
 > :warning: Use xterm to write the secrets: nano ~/.install/secrets/MAIL_APP_PW.txt
