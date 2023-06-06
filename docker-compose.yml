@@ -41,5 +41,6 @@ services:
       WHD_SCRIPTS: /hooks
       WHD_HOOK_TIMEOUT: '600'  
     volumes:
+      - /root:/root
       - ./hooks:/hooks
       - /var/run/docker.sock:/var/run/docker.sock       
